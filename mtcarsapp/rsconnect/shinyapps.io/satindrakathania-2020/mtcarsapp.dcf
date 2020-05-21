@@ -1,0 +1,12 @@
+name: mtcarsapp
+title: mtcarsapp
+username:
+account: satindrakathania-2020
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2333780
+bundleId: 3172700
+url: https://satindrakathania-2020.shinyapps.io/mtcarsapp/
+when: 1590018889.21708
+asMultiple: FALSE
+asStatic: FALSE
