@@ -8,15 +8,24 @@ ui <- fluidPage(
         column(12,
                h3("Graphs and Linear Regression Summary"),
                h4("Dataset: mtcars"),
+               h5("About the App:This app plot the graph for X and Y variables of your choice from the selection
+                menu of variables. Once you selected the XY vars you can opt for the Fcator variable to color and size the 
+                points.This app also give you the liberty to choose the graph type from the checkbox menu. You can also check 
+                the boxes to show the title and X-Y labels.The great advantage of this app is, besides giving you the plot it also 
+                provide you the linear regression summary for the fit along with residual vs. fitted values graph."),
                # fluidRow inside fluidRow
                fluidRow(
                    column(3,
+                   h4("1.Please select the variables"),
                           selectInput("X", "X Variable", choices = names(mtcars),selected = "hp"),
                           selectInput("Y", "Y Variable", choices = names(mtcars)),
                           selectInput("color", "color Factor", choices = c("cyl","vs","am","gear","carb")),
+                   h4("2.Select the graph type"),
                           selectInput("geom", "geom", c("point", "smooth",  "fit","jitter","violin","box","density")),
+                   h4("3.Check to show the labels"),
                           checkboxInput("show_xlab","show X Axis Label",value=FALSE),
                           checkboxInput("show_ylab","show Y Axis Label",value=FALSE),
+                   h4("4.Check to show the title"),
                           checkboxInput("Title","Show Title")
                    ),
                    column(9,
